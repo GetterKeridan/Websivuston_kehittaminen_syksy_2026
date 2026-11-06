@@ -1,0 +1,145 @@
+p {
+  color: black;
+}
+
+body {
+  background-color: lightgray;
+}
+
+.content-box {
+  padding: 20px;
+  margin: 10px;
+  background-color: rgb(246, 200, 208);
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 700px;
+}
+
+li {
+  color: black;
+  font-size: 20px;
+  margin-bottom: 5px;
+  width: 150px;
+
+}
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+
+}
+
+th,
+td {
+  border: 2px solid rgba(253, 29, 253, 0.892);
+  padding: 8px;
+  text-align: left;
+  outline: 4px solid rgb(239, 159, 214);
+
+}
+
+th {
+  background-color: lightskyblue;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 3px solid #0b085c;
+  padding: 20px;
+  border-radius: 5px;
+  outline: 4px solid rgb(173, 173, 233);
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: darkblue;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: darkblue;
+}
+
+input.transition-button {
+  background-color: darkblue;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input.transition-button:hover {
+  background-color: rgb(189, 4, 75);
+}
+
+.animation-box {
+  width: 100px;
+  height: 50px;
+  background-color: rgb(108, 185, 224);
+  position: relative;
+  animation: move 2s infinite alternate;
+  Text-align: center;
+  align-items: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+@keyframes move {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 100px;
+  }
+}
+
+.pseudo-list li:nth-child(odd) {
+  background-color: rgb(149, 247, 178);
+
+}
+
+.pseudo-list li:nth-child(even) {
+  background-color: rgb(249, 183, 234);
+}
+
+.filter-image {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.filter-image:hover {
+  filter: grayscale(0%);
+}
+.quote {
+  position: relative;
+  padding-left: 20px;
+  font-style: italic;
+ 
+}
+.quote::before {
+  content: '“';
+  font-size: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: lightgray;
+}
