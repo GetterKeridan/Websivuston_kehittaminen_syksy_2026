@@ -100,6 +100,8 @@ input.transition-button:hover {
   padding-top: 10px;
   box-sizing: border-box;
   font-size: 18px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 @keyframes move {
@@ -133,13 +135,33 @@ input.transition-button:hover {
   position: relative;
   padding-left: 20px;
   font-style: italic;
- 
+  
 }
+.quote::first-letter {
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
 .quote::before {
   content: '“';
   font-size: 50px;
   position: absolute;
-  left: 0;
-  top: 0;
-  color: lightgray;
+  left: -10px;
+  top: -10px;
+  color: rgb(165, 164, 164);
+}
+.quote::after {
+  content: '”';
+  font-size: 50px;
+  position: absolute;
+  right: 100px;
+  bottom: -40px;
+  color: rgb(165, 164, 164);
+}
+h2::before {
+  content: '\2661'; 
+  color: rgb(0, 0, 0);
 }
