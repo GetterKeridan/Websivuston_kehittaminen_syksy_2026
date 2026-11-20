@@ -1,0 +1,16 @@
+.animation-box {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(247, 203, 225);
+  animation: move down 2s infinite alternate;
+  position: relative;
+  text-align: center;
+}
+@keyframes move {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100px;
+  }
+}
