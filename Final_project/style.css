@@ -1,10 +1,35 @@
-.animation-box {
-  width: 100px;
-  height: 100px;
+body {
+    background-color:lavender;
+  
+}
+
+
+h1::after {        /* h1 otsikon jälkeen tulee sydän-merkki */
+  content: '\2661';
+  color:black;
+}
+h1 {         /*teksi on sivuston keskellä ylhäällä */
+  text-align: center;
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+  margin-top: 20px;
+
+}
+
+.animation-box {      /* tekstilaatikko, joka liikkuu ylös ja alas */
+  width: 150px;
+  height: 50px;
   background-color: rgb(247, 203, 225);
-  animation: move down 2s infinite alternate;
+  animation: move  3s infinite alternate;
   position: relative;
   text-align: center;
+  font-size: 30px;
+  margin:auto;
+  padding-top: 10px;
+  font-style: italic;
+  font-weight: bold;  /* fontin lihavointi */
+  border-radius: 10px;  /* pyöristetyt kulmat */
+  border: solid 2px black;  /* reunus */
 }
 @keyframes move {
   from {
@@ -13,4 +38,148 @@
   to {
     top: 100px;
   }
+
 }
+.responsive-nav .nav-list {   /* navigointivalikoima */
+      display: flex;
+      list-style: none;
+      gap: 15px;
+      margin-top: -70px;
+      font-size: 25px;
+      position: relative;
+      
+      
+      
+      
+    }
+    
+    @media (max-width: 600px) {
+      .responsive-nav .nav-list {
+        display: none;
+        
+      }
+       .responsive-nav .nav-list.active {
+        display: flex;
+        flex-direction: column;
+    }
+    
+      .responsive-nav .menu-toggle {
+        display: block;
+        margin-top: -80px;
+        font-size: 20px;
+       
+      }
+    }
+    .menu-toggle{      /*menu- painike tulee näkyviin puhelin-näytöllä*/
+        display: none;
+       } 
+       .top-bar {      /*sivuston yläpalkki*/
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    min-height: 100px;   
+    flex-wrap: wrap;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .responsive-nav .nav-list {
+        display: none;
+    }
+
+    .responsive-nav .nav-list.active {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.home-image {                   /*etusivun kuva*/
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+   
+  
+}
+.home-image img {
+    width: 100%;
+    height: 100%;
+   object-fit:cover;
+   object-position: center 60;
+   
+}
+@media (max-width: 600px) {    /*kuva mukautuu myös pienemmälle näytölle*/
+    .home-image {
+        height: 350px;
+    }
+}
+.content-box {
+  padding: 30px;
+  margin: 10px;
+  background-color: #f4cfe9;
+  border: 3px solid #db7e9d;
+  border-radius: 10%;
+  max-width: 50%;
+  margin: 10px auto;
+  margin-top: 5%;
+  
+  
+  
+}
+@media (max-width: 600px) {
+    .content-box {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+.quote {
+  position: relative;
+  padding-left: 20px;
+  font-style: italic;
+
+}
+
+.quote::first-letter {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+}.quote::before {
+  content: '“';
+  font-size: 50px;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  color: rgb(165, 164, 164);
+}
+
+.quote::after {
+  content: '”';
+  font-size: 50px;
+  position: absolute;
+  right: 0px;
+  bottom: -30px;
+  color: rgb(165, 164, 164);
+}  
+
+@media (max-width: 600px) {      /*jotta lainausmerkit näkyisivät oikein*/
+  .quote::after {
+    font-size: 35px;
+    right: 0;
+    bottom: -25px;
+  }
+
+  .quote {
+    padding-right: 30px;
+  }
+}
+
+      
+
+
+
+
+      
